@@ -3,14 +3,14 @@ import {View, Text, TouchableOpacity} from 'react-native';
 
 import {useSelector, useDispatch} from 'react-redux';
 
-// import { Container } from './styles';
+import * as CourseActions from '../../../store/actions/courses';
 
 export default function ProgramList() {
   const courses = useSelector(state => state.courses.data); //== state=>{return state.data;}
   const dispatch = useDispatch();
 
   function addCourse() {
-    dispatch({type: 'ADD_COURSE', title: 'GraphQL'});
+    dispatch(CourseActions.addCourse());
   }
 
   return (
