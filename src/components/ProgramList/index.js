@@ -3,22 +3,22 @@ import {View, Text, TouchableOpacity} from 'react-native';
 
 import {useSelector, useDispatch} from 'react-redux';
 
-import * as CourseActions from '../../../store/actions/courses';
+import * as ProgramActions from '../../../store/actions/programs';
 
 export default function ProgramList() {
-  const courses = useSelector(state => state.courses.data); //== state=>{return state.data;}
+  const programs = useSelector(state => state.programs.data); //== state=>{return state.data;}
   const dispatch = useDispatch();
 
-  function addCourse() {
-    dispatch(CourseActions.addCourse());
+  function addProgram() {
+    dispatch(ProgramActions.addProgram());
   }
 
   return (
     <View>
-      {courses.map((item, key) => (
+      {programs.map((item, key) => (
         <Text key={key}>{item}</Text>
       ))}
-      <TouchableOpacity onPress={addCourse}>
+      <TouchableOpacity onPress={addProgram}>
         <Text>Novo</Text>
       </TouchableOpacity>
     </View>
