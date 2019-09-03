@@ -5,7 +5,7 @@ const INITIAL_STATE = {
 
 //reducers
 function courses(state = INITIAL_STATE, action) {
-  switch (action) {
+  switch (action.type) {
     case 'ADD_COURSE':
       return {...state, data: [...state.data, action.title]};
     default:
