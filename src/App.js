@@ -9,8 +9,8 @@ import ProgramList from './components/ProgramList';
 const App = () => {
   return (
     <Provider store={store}>
-      {/* <CourseList /> */}
-      <ProgramList />
+      <CourseList />
+      {/* <ProgramList /> */}
     </Provider>
   );
 };
