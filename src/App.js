@@ -3,15 +3,12 @@ import {SafeAreaView, View, Text} from 'react-native';
 
 import {Provider} from 'react-redux';
 import store from '../store';
+import CourseList from './components/CourseList';
 
 const App = () => {
   return (
     <Provider store={store}>
-      <SafeAreaView>
-        <View>
-          <Text>Teste</Text>
-        </View>
-      </SafeAreaView>
+      <CourseList />
     </Provider>
   );
 };
